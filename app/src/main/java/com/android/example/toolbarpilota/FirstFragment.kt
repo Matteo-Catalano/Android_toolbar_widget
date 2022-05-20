@@ -12,7 +12,6 @@ import com.android.example.toolbarpilota.databinding.FragmentFirstBinding
 class FirstFragment : Fragment() {
 
     private var _binding: FragmentFirstBinding? = null
-
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -30,6 +29,10 @@ class FirstFragment : Fragment() {
 
         binding.buttonFirst.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        }
+
+        binding.buttonInput.setOnClickListener {
+            binding.textviewFirst.text = binding.editText.text
         }
     }
 
